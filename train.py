@@ -43,11 +43,13 @@ PROMPT_DICT = {
 }
 
 
+# 모델에 대한 인자를 받는 클래스
 @dataclass
 class ModelArguments:
     model_name_or_path: Optional[str] = field(default="facebook/opt-125m")
 
 
+# 데이터에 대한 인자를 받는 클래스
 @dataclass
 class DataArguments:
     data_path: str = field(default=None, metadata={"help": "Path to the training data."})
